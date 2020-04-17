@@ -1,0 +1,56 @@
+@import '~styles/_vars.scss';
+@import '~styles/_mixins.scss';
+
+.menu {  
+  .menu__burger {
+    @include gpu;
+    position: relative;
+    display: none;
+    width: 45px; 
+    min-width: 45px;
+    height: 35px;
+    transition: all 150ms ease-out;
+    outline: none;
+    cursor: pointer;
+    &:before {
+      @include gpu;
+      position: absolute;
+      left: 5px;
+      right: 5px;
+      top: 14px;
+      content: '';
+      background: $paragraph;      
+      height: 1px;
+      transition: all 150ms cubic-bezier(.17,.67,.63,1.55);
+    }
+    &:after {
+      @include gpu;
+      position: absolute;
+      left: 5px;
+      right: 5px;
+      bottom: 14px;
+      content: '';
+      background: $paragraph;
+      height: 1px;
+      transition: all 150ms cubic-bezier(.17,.67,.63,1.55);
+    }    
+    &.active {
+      &:hover {
+        &:after { background: $paragraph;   }
+        &:before { background: $paragraph;   }
+      }
+      &:after { transform: translate(0, -2px) rotate(45deg); }
+      &:before { transform: translate(0, 4px) rotate(-45deg); }
+    }
+    &:hover:not(.active) {
+      &:after {
+        background: $paragraph;  
+        transform: translate(0, 2px);
+      }
+      &:before {
+        background: $paragraph;  
+        transform: translate(0, -2px);
+      }
+    }
+  }
+}

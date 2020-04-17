@@ -1,0 +1,102 @@
+@import '~styles/_vars';
+@import '~styles/_mixins.scss';
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+[role="button"] {
+  color: inherit;
+  cursor: default;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  white-space: pre;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+}
+/* #endregion */
+
+.btn {
+  @include gpu;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  padding: 0.35em 1em;
+  border-radius: 2px;
+  font-size: 1.25em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: uppercase;  
+  background-color: #eee;
+  text-shadow: 0 0 2px rgba(0,0,0,.15);
+  position:relative;     
+  font-weight: 700;  
+  box-shadow:0 1px 2px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  margin: .25em;
+  transition: background-color 200ms ease-out;
+  &:focus {
+    outline: none;
+  }
+  &:before, &:after
+  {
+    content:"";
+      position:absolute; 
+      z-index:-1;
+      box-shadow:0 0 20px rgba(0,0,0,0.15);
+      top:50%;
+      bottom:0;
+      left:10px;
+      right:10px;
+      border-radius:100px / 10px;
+  }
+  &.btn--active {
+    background-color: white;
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+    color: $paragraph;
+  }
+  &.btn--white {
+    &:hover, &:focus { 
+      background-color: white;
+      box-shadow:0 1px 1px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.1) inset;
+    } 
+  }
+  &.btn--red{ 
+    &:hover { background-color: $red; } 
+  }
+  &.btn--yellow{ 
+    &:hover { background-color: $yellow; }
+  }
+  &.btn--teal{ 
+    &:hover { background-color: $teal; }
+  }
+  &.btn--blue{ 
+    &:hover { background-color: $blue; }
+  }
+  &.btn--purple{ 
+    &:hover { background-color: $purple; }
+  }
+  &.btn--gray{ 
+    &:hover { background-color: $gray; }
+  }
+}

@@ -1,0 +1,5 @@
+__scripts/*
+__webpack/*
+app/styles/*
+#server/*
+stories/*

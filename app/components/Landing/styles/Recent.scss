@@ -1,0 +1,45 @@
+@import '~styles/_mixins.scss';
+body .content section.recent {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 50px;
+  @include gpu;
+  will-change: opacity, transform;
+  transition: all 500ms cubic-bezier(.51,.41,.16,1.36);
+  transform: translateY(-25px);
+  opacity: 0;
+
+  .recent__title {
+    text-transform: uppercase;
+    max-width: 95%;
+    padding: 0;
+    margin: 0 1.5rem;
+    line-height: 135px;
+    height: 90px;
+    text-align: center;
+  }
+
+}
+
+@media (min-width: 395px)  {
+  .recent .recent__title { font-size: 1.5em; }
+}
+
+@media (min-width: 535px)  {
+  .recent .recent__title { 
+    font-size: 2em; 
+    margin: 0 2rem;
+  }
+}
+
+@media (min-width: 700px)  {
+  .recent .recent__title { font-size: 2.25em; }
+}
+
+@media (min-width: 980px)  {
+  .recent .recent__title { 
+    font-size: 2.5em; 
+    margin: 0;
+  }
+}

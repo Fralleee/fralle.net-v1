@@ -1,0 +1,20 @@
+@import '~styles/_mixins.scss';
+.masonry {
+  display: grid;
+  grid-gap: .25em;
+  padding: .25em;
+  grid-template-columns: repeat(auto-fill, minmax(380px,1fr));
+  grid-auto-rows: 280px;
+  transition: all 500ms cubic-bezier(.51,.41,.16,1.36);
+  &.unmounted {
+    @include gpu;
+    will-change: opacity, transform;
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+  &.mounted {
+    display: grid;
+  }
+  .project { grid-row-end: span 2; }
+  .github { grid-row-end: span 1; }
+}

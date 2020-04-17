@@ -1,0 +1,141 @@
+@import '~styles/_vars.scss';
+@import '~styles/_mixins.scss';
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 5px 4px -4px rgba(0,0,0,.1);
+  z-index: 1000;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;  
+  margin: 0 auto;
+
+  .menu__btn {
+    @include gpu;
+    display: block;
+    text-decoration: none;
+    color: $paragraph;
+    letter-spacing: 3px;
+    height: 45px;
+    line-height: 45px;
+    opacity: 0.75;
+    transition: all 150ms;
+    padding: 0 .5em;
+    & a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    & img {
+      @include gpu;
+      width: 32px;
+      height: 32px;
+      transition: all 150ms;
+    }
+    &:hover {
+      opacity: 1;
+      transform: translate(-1px, -1px);
+      background-color: #f2f2f2;
+    }    
+  }
+
+  .menu__home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu__home, .menu__work { 
+    text-align: center;
+    min-width: 110px;
+    opacity: 1;
+    padding: 0 1em;
+    &.active { background-color: #f6f6f6; } 
+    &:hover {
+      opacity: 1;
+      transform: none;
+      background-color: #f2f2f2;
+    }   
+  }
+
+  .social__link {
+    & .title {
+      display: none;
+      margin: 0;
+    }
+  }
+
+  .nav {
+    display: flex;
+    width: 100%;
+    & div:first-child { margin-left: auto; }
+    & div:last-child { margin-right: auto; }
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .menu__overlay {
+    display: block;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,.25);
+    z-index: 99;
+  }
+  header > .menu {
+    position: relative;
+    z-index: 100;
+    .nav:not(.show) {
+      display: none !important;
+      .menu__btn { display: none; }
+    }
+    .nav.show {
+      position: absolute;
+      left: 0;
+      top: 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      padding-bottom: 35px;
+      .menu__btn {
+        width: 200px;
+        text-align: left;
+        margin-left: 50px; 
+        opacity: 0;
+      }
+      & div { margin: 0; }
+      & .social__link { 
+        order: 2; 
+        & .title{
+          font-size: 1em;
+          display: block;
+          margin-left: 15px;
+        } 
+      }
+      .menu__btn:last-child  {
+        animation: enter 250ms 150ms cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
+      }
+      @for $i from 1 through 6 {
+        .menu__btn:nth-child(#{($i - 1)}) {
+          animation: enter 250ms #{$i*150}ms cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
+        }
+      }
+    }
+  }
+  .menu .menu__burger {
+    display: block !important;
+    margin-left: auto;
+  } 
+}
+
+@keyframes enter {
+  from { margin-left: 50px; opacity: 0;}
+  to { margin-left: 0; opacity: 1 }
+}

@@ -1,0 +1,12 @@
+body .content section.about {
+  margin: 0 auto;
+  max-width: 780px;
+  padding: 0 20px;
+  padding-bottom: 200px;
+  
+  h3.about__title { font-weight: 700; }
+  .about__intermission {
+    padding: 25px;
+    background: rgba(0,0,0,.05);
+  }
+}

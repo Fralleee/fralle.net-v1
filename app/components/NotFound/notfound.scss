@@ -1,0 +1,27 @@
+@import '~styles/_mixins.scss';
+
+.notfound {
+  padding: 0 1em;
+  padding-top: calc(5vw + 50px);
+  .heading { font-weight: 700; }
+  text-align: center;
+  img {
+    @include gpu;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 480px;
+    transition: transform 150ms cubic-bezier(.51,.41,.16,1.36);
+    &:hover {
+      transform: rotate(-10deg);
+    }
+  }
+  .na-reasons__list {
+    list-style: none;
+    padding: 0;
+    li { 
+      line-height: 1.6em;
+      margin-top: 5px
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import '~styles/_mixins.scss';
+
+.welcome {
+  @include gpu;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  min-height: 720px;
+  will-change: opacity, transform;
+  transform: translateY(-70px);
+  transition: transform 500ms 0ms cubic-bezier(.25,2,.5,1);
+
+  .welcome__texts {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    background: linear-gradient(rgba(252,252,252,.85) 80%, transparent);
+  }
+
+  .welcome__title {
+    @include gpu;
+    transform: translateY(50px);
+    opacity: 0;
+    font-weight: 700;
+    text-align: center;
+    padding: 25px 0 0 0;
+    transition: all 800ms 500ms cubic-bezier(.51,.41,.16,1.36);
+  }
+
+  .welcome__subtitle {
+    @include gpu;
+    transform: translateY(30px);
+    opacity: 0;
+    text-align: center;
+    padding: 10px 0 25px 0;
+    transition: all 800ms 700ms cubic-bezier(.51,.41,.16,1.36);
+  }
+
+}

@@ -1,0 +1,49 @@
+@import '~styles/_vars.scss';
+@import '~styles/_mixins.scss';
+
+.intro {  
+  @include gpu;
+  will-change: opacity, transform;
+  transition: all 500ms cubic-bezier(.51,.41,.16,1.36);
+  transform: translateY(-25px);
+  opacity: 0;
+}
+
+blockquote {
+  position: relative;
+  padding: 35px 40px;
+  font-size: 1.35em;
+  line-height: 1.6;
+  color: rgba(0,0,0,.75);
+  max-width: 900px;
+  margin: 50px auto;
+  background: #fcfcfc;
+  text-align: center;
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: calc(100% - 7px);
+    height: 5px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, .15);
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 50px;
+    width: calc(100% - 107px);
+    height: 5px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, .15);
+  }
+}
+
+@media (min-width: 600px) {
+  blockquote {
+    font-size: 1.5em;
+  }
+}

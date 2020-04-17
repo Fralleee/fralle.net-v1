@@ -1,0 +1,6 @@
+@mixin gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0, 0, 0);
+}

@@ -1,0 +1,72 @@
+@import '_vars.scss';
+
+body {
+  font-size: 100%;
+  line-height: 1.3;
+  font-display: swap;
+  font-family: Roboto, sans-serif;
+  color: black;
+  text-rendering: optimizeSpeed;
+}
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p,h1,h2,h3,h4,h5,blockquote { cursor: default; }
+
+h1,h2,h3,h4,h5 {
+  margin: 0;   
+  font-family: Montserrat, sans-serif;
+  color: $heading;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.25em;
+  line-height: 1.6;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.625em;
+}
+h3 {
+  font-size: 1.375em;
+}
+h4 {
+  font-size: 1.125em;
+}
+blockquote {
+  font-size: 1.25em;
+}
+
+
+@media (min-width: 700px) { 
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  blockquote {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 900px) { 
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2.25em;
+  }
+  h3 {
+    font-size: 1.75em;
+  }
+}

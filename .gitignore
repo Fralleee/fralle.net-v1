@@ -1,0 +1,9 @@
+node_modules/
+build/
+.vscode/
+.vs/
+package-lock.json
+bitbucket-pipelines.yml
+yarn-lock.json
+yarn.lock
+yarn-error.log

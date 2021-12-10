@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfcfc">
+  <meta name="msapplication-TileColor" content="#fcfcfc">
+  <meta name="description" content="18-03-27 - Hello! I am Roland Chelwing, a system developer based in Skövde, Sweden. I usually spend my time creating awesome stuff for the web or in Unity."/>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#fcfcfc">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <title>Fralle – Designer and developer</title>
+  <style>
+    html {
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    
+    body {
+      margin: 0;
+      background-color: #fcfcfc;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 
+
+    Hello fellow developer.
+
+    This page is made with react so reading this minified javascript won't probably help you.
+    Hit me up if you want to ask anything about it.
+
+  -->
+
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>   
+  <style>
+    #loader .loader__overlay{position: fixed; top: 0; width: 100%; height: 100%; background-color: #f5f5f5; transform: translate3d(0,0,0); z-index: 10000; will-change: opacity;}#loader .loader__content{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 100001; will-change: opacity;}#loader .text{font-family: Arial !important; color: #3A3934; display: inline-block; margin-left: 5px; font-weight: bold;}#loader .bounceball{position: relative; display: inline-block; height: 37px; width: 15px;}#loader .bounceball:before{position: absolute; content: ''; display: block; top: 0; width: 15px; height: 15px; border-radius: 50%; background-color: #3A3934; transform-origin: 50%; animation: bounce 500ms infinite ease;}@keyframes bounce{0%{top: 30px; height: 5px; border-radius: 60px 60px 20px 20px; -webkit-transform: scaleX(2); transform: scaleX(2);}35%{height: 15px; border-radius: 50%; -webkit-transform: scaleX(1); transform: scaleX(1);}100%{top: 0;}}.loaded .loader__overlay{opacity: 0; transition: all 300ms 300ms ease-out; transform: translateZ(0); backface-visibility: hidden; perspective: 1000; transform: translate3d(0, 0, 0);}.loaded .loader__content{opacity: 0; transition: all 300ms ease-out; transform: translateZ(0); backface-visibility: hidden; perspective: 1000; transform: translate3d(0, 0, 0);}#loader.loaded{visibility: hidden;}#loader.loaded .bounceball:before{animation-play-state: paused;}
+  </style>
+  <div id='loader'>
+    <div class="loader__overlay"></div>
+    <div class="loader__content"> 
+      <div class="bounceball"></div>
+      <div class="text">NOW LOADING</div>
+    </div>
+  </div>
+  <div id="root"></div>
+  <div id="modal-root"></div>
+   <script src="/js/vendor.min.58a2cae6d8ca784f.js"></script>  <script src="/js/app.min.24db45c355f15449.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+  <script>
+    WebFont.load({ google: { families: [
+      'Roboto:400,700',
+      'Montserrat:400,700'
+    ] } });
+  </script>
+</body>
+
+</html>

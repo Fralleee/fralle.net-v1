@@ -1,0 +1,8 @@
+{
+  "short_name": "Fralle",
+  "name": "Fralle",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#fcfcfc",
+  "background_color": "#fcfcfc"
+}

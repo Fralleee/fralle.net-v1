@@ -11,10 +11,21 @@
     "react"
   ],
   "retainLines": true,
-  "plugins": ["react-hot-loader/babel", "transform-decorators-legacy", "transform-class-properties"],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "transform-decorators-legacy",
+    "transform-class-properties"
+  ],
   "env": {
     "test": {
-      "plugins": ["transform-es2015-modules-commonjs"]
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
     }
   }
 }
